@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- JS -->
+  <script src="./main.js" defer></script>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+
+<body class="theme1">
+
+  <main class="calc">
+    <section class="header">
+      <h1 class="header-heading">calc</h1>
+      <div class="theme-container">
+        <span class="themes">Theme</span>
+        <div>
+          <span class="theme-toggle__heading">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+          </span>
+          <div class="theme-toggle__toggle">
+            <span title="Change theme" class="theme-toggle__selector selector-active" id="theme-1"></span>
+            <span title="Change theme" class="theme-toggle__selector" id="theme-2"></span>
+            <span title="Change theme" class="theme-toggle__selector" id="theme-3"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <form name="calculator">
+      <input type="textfield" name="ans" value="" autocomplete="off" read-only="true" class="display">
+
+      <div class="keyboard">
+        <div class="key">
+          <input type="button" value="7" class="key__inner" id="keyNumber">
+        </div>
+        <div class="key">
+          <input type="button" value="8" class="key__inner" id="keyNumber">
+        </div>
+        <div class="key">
+          <input type="button" value="9" class="key__inner" id="keyNumber">
+        </div>
+        <div class="key key__del">
+          <input type="button" value="DEL" class="key__inner key__inner__del">
+        </div>
+        <div class="key">
+          <input type="button" value="4" class="key__inner" id="keyNumber">
+        </div>
+        <div class="key">
+          <input type="button" value="5" class="key__inner" id="keyNumber">
+        </div>
+        <div class="key">
+          <input type="button" value="6" class="key__inner" id="keyNumber">
+        </div>
+        <div class="key">
+          <input type="button" value="+" class="key__inner" id="keyOperator">
+        </div>
+        <div class="key">
+          <input type="button" value="1" class="key__inner" id="keyNumber">
+        </div>
+        <div class="key">
+          <input type="button" value="2" class="key__inner" id="keyNumber">
+        </div>
+        <div class="key">
+          <input type="button" value="3" class="key__inner" id="keyNumber">
+        </div>
+        <div class="key">
+          <input type="button" value="-" class="key__inner" id="keyOperator">
+        </div>
+        <div class="key">
+          <input type="button" value="." class="key__inner" id="keyNumber">
+        </div>
+        <div class="key">
+          <input type="button" value="0" class="key__inner" id="keyNumber">
+        </div>
+        <div class="key">
+          <input type="button" value="/" class="key__inner" id="keyOperator">
+        </div>
+        <div class="key">
+          <input type="button" value="x" class="key__inner" id="keyOperator">
+        </div>
+        <div class="key key__reset">
+          <input type="reset" value="RESET" class="key__inner key__inner__reset">
+        </div>
+        <div class="key key__results">
+          <input type="button" value="=" class="key__inner__results">
+        </div>
+      </div>
+    </form>
+
+  </main>
+
+  <footer class="attribution">
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
+    <p>Coded by <a target="_blank" href="https://omar-diaz.vercel.app">Omar Díaz</a>.</p>
+  </footer>
+</body>
+
+</html>

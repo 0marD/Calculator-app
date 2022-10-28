@@ -1,0 +1,395 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button,
+input {
+  border: unset;
+  cursor: pointer;
+  outline: none;
+}
+
+img,
+svg {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input {
+  font-weight: inherit;
+}
+
+p {
+  width: 100%;
+  text-align: center;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  width: 100%;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+  font-weight: 700;
+}
+
+.calc {
+  padding: 2.5rem 1.25rem;
+  border-radius: 0.75rem;
+  height: 667px;
+  width: 100%;
+  max-width: 500px;
+  margin: 1rem;
+}
+
+.display {
+  width: 100%;
+  height: 90px;
+  color: inherit;
+  border-radius: 1rem;
+  margin: 30px 0 20px 0;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 1.5rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-align: right;
+  pointer-events: none;
+}
+
+.keyboard {
+  width: 100%;
+  height: 425px;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1.25rem;
+  gap: 14.6px;
+}
+@media screen and (min-width: 768px) {
+  .keyboard {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+}
+
+.key {
+  margin: auto;
+  width: 100%;
+  height: 65px;
+  border-radius: 0.35rem;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+@media screen and (min-width: 768px) {
+  .key {
+    height: 62px;
+  }
+}
+.key:hover {
+  -webkit-filter: brightness(1.5);
+          filter: brightness(1.5);
+  cursor: pointer;
+}
+.key:hover:active {
+  opacity: 0.35;
+}
+.key__inner {
+  width: 100%;
+  height: 61px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: inherit;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .key__inner {
+    height: 58px;
+  }
+}
+.key__inner__results {
+  width: 100%;
+  height: 61px;
+  font-size: 1.5rem;
+  font-weight: inherit;
+  color: inherit;
+}
+.key__results {
+  grid-column: -3/-1;
+}
+.key__reset {
+  grid-column: -5/-3;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.header-heading {
+  font-size: 2rem;
+}
+
+.theme-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.themes {
+  margin: auto;
+  margin-bottom: 0;
+  margin-right: 1rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.theme-toggle__heading {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
+  font-size: 0.8rem;
+  margin-bottom: 0.25rem;
+}
+.theme-toggle__toggle {
+  width: 4.6rem;
+  height: 1.5rem;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.3rem;
+  margin: auto;
+}
+.theme-toggle__selector {
+  background-color: transparent;
+  border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.selector-active {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.attribution {
+  color: inherit;
+  font-weight: normal;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+  text-align: center;
+  width: 100%;
+}
+.attribution a {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-left: 0.1rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: inherit;
+}
+.attribution a:hover {
+  opacity: 1;
+}
+
+body.theme1 {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background-color: hsl(222deg, 26%, 31%);
+  color: hsl(0deg, 0%, 100%);
+}
+body.theme1 .key__inner__reset {
+  background-color: hsl(225deg, 21%, 49%);
+}
+body.theme1 .key {
+  background-color: hsl(28deg, 16%, 65%);
+}
+body.theme1 .key .key__inner {
+  color: hsl(221deg, 14%, 31%);
+}
+body.theme1 .key .key__inner__reset,
+body.theme1 .key .key__inner__results,
+body.theme1 .key .key__inner__del {
+  color: hsl(0deg, 0%, 100%);
+}
+body.theme1 .key .key__inner__reset,
+body.theme1 .key .key__inner__del {
+  background-color: hsl(225deg, 21%, 49%);
+}
+body.theme1 .key .key__inner__results {
+  background-color: hsl(6deg, 63%, 50%);
+}
+body.theme1 .key__results {
+  background-color: hsl(6deg, 70%, 34%);
+}
+body.theme1 .key__reset,
+body.theme1 .key__del {
+  background-color: hsl(224deg, 28%, 35%);
+}
+body.theme1 .keyboard {
+  background-color: hsl(223deg, 31%, 20%);
+}
+body.theme1 .display {
+  background-color: hsl(224deg, 36%, 15%);
+  color: hsl(0deg, 0%, 100%);
+}
+body.theme1 .theme-toggle__toggle {
+  background-color: hsl(223deg, 31%, 20%);
+}
+body.theme1 .selector-active {
+  background-color: hsl(6deg, 63%, 50%);
+}
+
+body.theme2 {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background-color: hsl(0deg, 0%, 90%);
+  color: hsl(60deg, 10%, 19%);
+}
+body.theme2 .key {
+  background-color: hsl(28deg, 16%, 65%);
+}
+body.theme2 .key .key__inner {
+  color: hsl(60deg, 10%, 19%);
+}
+body.theme2 .key .key__inner__reset,
+body.theme2 .key .key__inner__results,
+body.theme2 .key .key__inner__del {
+  color: hsl(0deg, 0%, 100%);
+}
+body.theme2 .key .key__inner__reset,
+body.theme2 .key .key__inner__del {
+  background-color: hsl(185deg, 42%, 37%);
+}
+body.theme2 .key .key__inner__results {
+  background-color: hsl(25deg, 98%, 40%);
+}
+body.theme2 .key__results {
+  background-color: hsl(25deg, 99%, 27%);
+}
+body.theme2 .key__reset,
+body.theme2 .key__del {
+  background-color: hsl(185deg, 58%, 25%);
+}
+body.theme2 .keyboard {
+  background-color: hsl(0deg, 5%, 81%);
+}
+body.theme2 .display {
+  background-color: hsl(0deg, 0%, 93%);
+  color: hsl(60deg, 10%, 19%);
+}
+body.theme2 .theme-toggle__toggle {
+  background-color: hsl(0deg, 5%, 81%);
+}
+body.theme2 .selector-active {
+  background-color: hsl(25deg, 98%, 40%);
+}
+
+body.theme3 {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background-color: hsl(268deg, 75%, 9%);
+  color: hsl(52deg, 100%, 62%);
+}
+body.theme3 .key {
+  background-color: hsl(290deg, 70%, 36%);
+}
+body.theme3 .key .key__inner {
+  color: hsl(52deg, 100%, 62%);
+  background-color: hsl(268deg, 47%, 21%);
+}
+body.theme3 .key .key__inner__reset,
+body.theme3 .key .key__inner__results,
+body.theme3 .key .key__inner__del {
+  color: hsl(0deg, 0%, 100%);
+}
+body.theme3 .key .key__inner__reset,
+body.theme3 .key .key__inner__del {
+  background-color: hsl(281deg, 89%, 26%);
+}
+body.theme3 .key .key__inner__results {
+  background-color: hsl(176deg, 100%, 44%);
+  color: hsl(198deg, 20%, 13%);
+}
+body.theme3 .key__results {
+  background-color: hsl(177deg, 92%, 70%);
+}
+body.theme3 .key__reset,
+body.theme3 .key__del {
+  background-color: hsl(290deg, 70%, 36%);
+}
+body.theme3 .keyboard {
+  background-color: hsl(268deg, 71%, 12%);
+}
+body.theme3 .display {
+  background-color: hsl(268deg, 71%, 12%);
+  color: hsl(52deg, 100%, 62%);
+}
+body.theme3 .theme-toggle__toggle {
+  background-color: hsl(268deg, 71%, 12%);
+}
+body.theme3 .selector-active {
+  background-color: hsl(176deg, 100%, 44%);
+}/*# sourceMappingURL=style.css.map */
